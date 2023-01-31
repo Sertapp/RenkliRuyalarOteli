@@ -1,1 +1,36 @@
 ﻿@model List<Rezervasyon>
+<a asp-action="Create" asp-controller="Musteri" class="btn btn-primary">Yeni Kayit</a>
+<div class="card">
+    <div class="card-header">
+        <h3>Musteriler</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>OdaId</td>
+                    <td>OdaFiyatId</td>
+                    <td>GirisTarihi</td>
+                    <td>CikisTarihi</td>
+                    <td>KullaniciId</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Rezervasyon in Model)
+                {
+                    <tr>
+                        <td>@Rezervasyon.OdaId</td>
+                        <td>@Rezervasyon.OdaFiyatId</td>
+                        <td>@Rezervasyon.GirisTarihi</td>
+                        <td>@Rezervasyon.CikisTarihi</td>
+                        <td>@Rezervasyon.KullaniciId</td>
+
+                        <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@Rezervasyon.Id">Update</a> </td>
+                        <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@Rezervasyon.Id">Delete</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

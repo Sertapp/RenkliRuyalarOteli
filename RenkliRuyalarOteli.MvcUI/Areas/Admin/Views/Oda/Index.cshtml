@@ -1,1 +1,35 @@
 ﻿@model List<Oda>
+<a asp-action="Create" asp-controller="Musteri" class="btn btn-primary">Yeni Kayit</a>
+<div class="card">
+    <div class="card-header">
+        <h3>Musteriler</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                  
+                    <td>OdaNo</td>
+                    <td>KisiSayisi</td>
+                    <td>Durum</td>
+                    <td>KullaniciId</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Oda in Model)
+                {
+                    <tr>
+                        <td>@Oda.OdaNo</td>
+                        <td>@Oda.KisiSayisi</td>
+                        <td>@Oda.Durum</td>
+                        <td>@Oda.KullaniciId</td>
+
+                        <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@Oda.Id">Update</a> </td>
+                        <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@Oda.Id">Delete</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

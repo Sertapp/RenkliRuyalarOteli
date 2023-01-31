@@ -9,8 +9,8 @@
             <thead>
                 <tr>
                     <td>Musteri Kodu</td>
-                    <td>Adi</td>
-                    <td>Soyadi</td>
+                    <td>Ad</td>
+                    <td>Soyad</td>
                     <td>Cinsiyet</td>
                     <td>CepNo</td>
                     <td>KullaniciId</td>
@@ -18,18 +18,18 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var musteri in Model)  
+                @foreach (var Musteri in Model)  
                 {
                     <tr>
-                        <td>@musteri.Id</td>
-                        <td>@musteri.Ad</td>
-                        <td>@musteri.Soyad</td>
-                        <td>@musteri.Cinsiyet</td>
-                        <td>@musteri.CepNo</td>
-                        <td>@musteri.KullaniciId</td>
+                        <td>@Musteri.Id</td>
+                        <td>@Musteri.Ad</td>
+                        <td>@Musteri.Soyad</td>
+                        <td>@Musteri.Cinsiyet</td>
+                        <td>@Musteri.CepNo</td>
+                        <td>@Musteri.KullaniciId</td>
 
-                        <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@musteri.Id">Update</a> </td>
-                        <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@musteri.Id">Delete</a> </td>
+                        <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@Musteri.Id">Update</a> </td>
+                        <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@Musteri.Id">Delete</a> </td>
                     </tr>
                 }
             </tbody>

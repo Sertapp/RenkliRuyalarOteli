@@ -1,1 +1,32 @@
 ﻿@model List<RezervasyonDetay>
+<a asp-action="Create" asp-controller="Musteri" class="btn btn-primary">Yeni Kayit</a>
+<div class="card">
+    <div class="card-header">
+        <h3>Musteriler</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>RezervasyonId</td>
+                    <td>MusteriId</td>
+                    <td>KullaniciId</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var RezervasyonDetay in Model)
+                {
+                    <tr>
+                        <td>@RezervasyonDetay.RezervasyonId</td>
+                        <td>@RezervasyonDetay.MusteriId</td>
+                        <td>@RezervasyonDetay.KullaniciId</td>
+
+                        <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@RezervasyonDetay.Id">Update</a> </td>
+                        <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@RezervasyonDetay.Id">Delete</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
