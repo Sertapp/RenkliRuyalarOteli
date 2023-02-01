@@ -38,7 +38,6 @@
     <Folder Include="Areas\Admin\Models\RezervasyonDetay\" />
     <Folder Include="Areas\Admin\Models\Rezervasyon\" />
     <Folder Include="Areas\Admin\Models\OdaFiyat\" />
-    <Folder Include="Areas\Admin\Models\Oda\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

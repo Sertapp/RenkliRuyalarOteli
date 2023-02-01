@@ -13,7 +13,7 @@ namespace RenkliRuyalarOteli.MvcUI.Areas.Admin.Models.Musteri
         public string Soyad { get; set; }
         public bool Cinsiyet { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "TcNo Zorunlu Alandir")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Cep Numarasi Zorunlu Alandir")]
         [MaxLength(11)]
         public string CepNo { get; set; }
 
